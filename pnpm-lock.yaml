@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@fluent/bundle': ^0.16.1
   '@vue/cli-plugin-babel': ~4.5.0
   '@vue/cli-plugin-eslint': ~4.5.0
   '@vue/cli-service': ~4.5.0
@@ -9,10 +10,13 @@ specifiers:
   core-js: ^3.6.5
   eslint: ^6.7.2
   eslint-plugin-vue: ^7.0.0
+  fluent-vue: ^3.0.0-beta.16
   vue: ^3.0.0
 
 dependencies:
+  '@fluent/bundle': 0.16.1
   core-js: 3.16.1
+  fluent-vue: 3.0.0-beta.16_@fluent+bundle@0.16.1+vue@3.2.1
   vue: 3.2.1
 
 devDependencies:
@@ -1175,6 +1179,20 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.14.9
       to-fast-properties: 2.0.0
+
+  /@fluent/bundle/0.16.1:
+    resolution: {integrity: sha512-l/y8uvAC1vAIEGXfbt97g36s9gJ6wdEFRWCJo4vtoxD1e210MxBAXfLhU+wfzaatlxwh+HjJ15G41ee6V8Y4ww==}
+    engines: {node: '>=10.0.0'}
+    dev: false
+
+  /@fluent/sequence/0.6.0_@fluent+bundle@0.16.1:
+    resolution: {integrity: sha512-U9GRc4GR3IIO58RRfa+Mo9OMKJ3c/R+1lBQ3LWulBVF6BIfzVh50h0uKqsss8pyVqsaMowTVChK8aus+d8ke4g==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      '@fluent/bundle': '>= 0.13.0'
+    dependencies:
+      '@fluent/bundle': 0.16.1
+    dev: false
 
   /@hapi/address/2.1.4:
     resolution: {integrity: sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ==}
@@ -2588,6 +2606,11 @@ packages:
       schema-utils: 2.7.1
       webpack: 4.46.0
     dev: true
+
+  /cached-iterable/0.3.0:
+    resolution: {integrity: sha512-MDqM6TpBVebZD4UDtmlFp8EjVtRcsB6xt9aRdWymjk0fWVUUGgmt/V7o0H0gkI2Tkvv8B0ucjidZm4mLosdlWw==}
+    engines: {node: '>=8.9.0'}
+    dev: false
 
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
@@ -4235,6 +4258,24 @@ packages:
   /flatted/2.0.2:
     resolution: {integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==}
     dev: true
+
+  /fluent-vue/3.0.0-beta.16_@fluent+bundle@0.16.1+vue@3.2.1:
+    resolution: {integrity: sha512-w1pfrJ8sl4QOcdn+8EDtC0bW6omhSJYQYQVrhjtmw5Ci9Qn9FvTN9QoHg29Z3f49ZW+x6jwb1XKuINF8zqpJTg==}
+    peerDependencies:
+      '@fluent/bundle': '>=0.14.0'
+      '@vue/composition-api': '>=1.0.0-beta.7'
+      vue: ^2.6.11 || >=3.0.0-rc.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      '@fluent/bundle': 0.16.1
+      '@fluent/sequence': 0.6.0_@fluent+bundle@0.16.1
+      cached-iterable: 0.3.0
+      tslib: 2.3.0
+      vue: 3.2.1
+      vue-demi: 0.11.2_vue@3.2.1
+    dev: false
 
   /flush-write-stream/1.1.1:
     resolution: {integrity: sha512-3Z4XhFZ3992uIq0XOqb9AreonueSYphE6oYbpt5+3u06JWklbsPkNv3ZKkP9Bz/r+1MWCaMoSQ28P85+1Yc77w==}
@@ -8128,6 +8169,10 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+    dev: false
+
   /tty-browserify/0.0.0:
     resolution: {integrity: sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=}
     dev: true
@@ -8404,6 +8449,21 @@ packages:
   /vm-browserify/1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
+
+  /vue-demi/0.11.2_vue@3.2.1:
+    resolution: {integrity: sha512-J+X8Au6BhQdcej6LY4O986634hZLu55L0ewU2j8my7WIKlu8cK0dqmdUxqVHHMd/cMrKKZ9SywB/id6aLhwCtA==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.1
+    dev: false
 
   /vue-eslint-parser/7.10.0_eslint@6.8.0:
     resolution: {integrity: sha512-7tc/ewS9Vq9Bn741pvpg8op2fWJPH3k32aL+jcIcWGCTzh/zXSdh7pZ5FV3W2aJancP9+ftPAv292zY5T5IPCg==}
