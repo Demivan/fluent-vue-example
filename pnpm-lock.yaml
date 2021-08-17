@@ -11,6 +11,7 @@ specifiers:
   eslint: ^6.7.2
   eslint-plugin-vue: ^7.0.0
   fluent-vue: ^3.0.0-beta.16
+  fluent-vue-loader: ^3.0.0-beta.16
   vue: ^3.0.0
 
 dependencies:
@@ -27,6 +28,7 @@ devDependencies:
   babel-eslint: 10.1.0_eslint@6.8.0
   eslint: 6.8.0
   eslint-plugin-vue: 7.16.0_eslint@6.8.0
+  fluent-vue-loader: 3.0.0-beta.16
 
 packages:
 
@@ -4259,6 +4261,12 @@ packages:
     resolution: {integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==}
     dev: true
 
+  /fluent-vue-loader/3.0.0-beta.16:
+    resolution: {integrity: sha512-1ilOnIgWf9BJJMtmV7glsOux4vlR/nP4H9pyp5G1ZeNpzugpnhnRgffd1lDdnldBWemHT3xPA8fR66M8265nxw==}
+    dependencies:
+      loader-utils: 2.0.0
+    dev: true
+
   /fluent-vue/3.0.0-beta.16_@fluent+bundle@0.16.1+vue@3.2.1:
     resolution: {integrity: sha512-w1pfrJ8sl4QOcdn+8EDtC0bW6omhSJYQYQVrhjtmw5Ci9Qn9FvTN9QoHg29Z3f49ZW+x6jwb1XKuINF8zqpJTg==}
     peerDependencies:
@@ -4274,7 +4282,7 @@ packages:
       cached-iterable: 0.3.0
       tslib: 2.3.0
       vue: 3.2.1
-      vue-demi: 0.11.2_vue@3.2.1
+      vue-demi: 0.11.3_vue@3.2.1
     dev: false
 
   /flush-write-stream/1.1.1:
@@ -5532,7 +5540,6 @@ packages:
       emojis-list: 3.0.0
       json5: 2.2.0
     dev: true
-    optional: true
 
   /locate-path/3.0.0:
     resolution: {integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==}
@@ -8450,14 +8457,14 @@ packages:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
 
-  /vue-demi/0.11.2_vue@3.2.1:
-    resolution: {integrity: sha512-J+X8Au6BhQdcej6LY4O986634hZLu55L0ewU2j8my7WIKlu8cK0dqmdUxqVHHMd/cMrKKZ9SywB/id6aLhwCtA==}
+  /vue-demi/0.11.3_vue@3.2.1:
+    resolution: {integrity: sha512-DpM0TTMpclRZDV6AIacgg837zrim/C9Zn+2ztXBs9hsESJN9vC83ztjTe4KC4HgJuVle8YUjPp7HTwWtwOHfmg==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0 || ^2.6.0
+      vue: ^3.0.0-0 || ^2.6.0
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
