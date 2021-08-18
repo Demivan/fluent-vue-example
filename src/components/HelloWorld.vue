@@ -13,11 +13,11 @@
     </ul>
     <h3>Essential Links</h3>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
+      <li><a href="https://vuejs.org" target="_blank" rel="noopener">{{ $t('core-docs-link') }}</a></li>
+      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">{{ $t('forum-link') }}</a></li>
+      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">{{ $t('community-chat-link') }}</a></li>
+      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">{{ $t('twitter-link') }}</a></li>
+      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">{{ $t('news-link') }}</a></li>
     </ul>
     <h3>Ecosystem</h3>
     <ul>
@@ -38,6 +38,14 @@ export default {
   }
 }
 </script>
+
+<fluent locale="en">
+core-docs-link = Core Docs
+forum-link = Forum
+community-chat-link = Community Chat
+twitter-link = Twitter
+news-link = News
+</fluent>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
