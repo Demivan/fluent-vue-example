@@ -4,5 +4,10 @@ module.exports = {
       resourceQuery: /blockType=fluent/,
       loader: 'fluent-vue-loader'
     })
+
+    config.module.rules.push({
+      test: /\.ftl$/,
+      loader: 'raw-loader'
+    })
   }
 }

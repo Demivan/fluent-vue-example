@@ -12,6 +12,7 @@ specifiers:
   eslint-plugin-vue: ^7.0.0
   fluent-vue: ^3.0.0-beta.16
   fluent-vue-loader: ^3.0.0-beta.16
+  raw-loader: ^4.0.2
   vue: ^3.0.0
 
 dependencies:
@@ -23,12 +24,13 @@ dependencies:
 devDependencies:
   '@vue/cli-plugin-babel': 4.5.13_cf688f7a0b7e710fcf2d18c5be7670ad
   '@vue/cli-plugin-eslint': 4.5.13_a58cf9e4d577795b8c257bee96d49483
-  '@vue/cli-service': 4.5.13_@vue+compiler-sfc@3.2.1
+  '@vue/cli-service': 4.5.13_89f94c8dfb1f40b8ce420cff6d7afd74
   '@vue/compiler-sfc': 3.2.1
   babel-eslint: 10.1.0_eslint@6.8.0
   eslint: 6.8.0
   eslint-plugin-vue: 7.16.0_eslint@6.8.0
   fluent-vue-loader: 3.0.0-beta.16
+  raw-loader: 4.0.2
 
 packages:
 
@@ -1569,7 +1571,7 @@ packages:
     dependencies:
       '@babel/core': 7.15.0
       '@vue/babel-preset-app': 4.5.13_vue@3.2.1
-      '@vue/cli-service': 4.5.13_@vue+compiler-sfc@3.2.1
+      '@vue/cli-service': 4.5.13_89f94c8dfb1f40b8ce420cff6d7afd74
       '@vue/cli-shared-utils': 4.5.13
       babel-loader: 8.2.2_be352a5a80662835a7707f972edfcfde
       cache-loader: 4.1.0_webpack@4.46.0
@@ -1588,7 +1590,7 @@ packages:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
       eslint: '>= 1.6.0 < 7.0.0'
     dependencies:
-      '@vue/cli-service': 4.5.13_@vue+compiler-sfc@3.2.1
+      '@vue/cli-service': 4.5.13_89f94c8dfb1f40b8ce420cff6d7afd74
       '@vue/cli-shared-utils': 4.5.13
       eslint: 6.8.0
       eslint-loader: 2.2.1_eslint@6.8.0+webpack@4.46.0
@@ -1606,7 +1608,7 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     dependencies:
-      '@vue/cli-service': 4.5.13_@vue+compiler-sfc@3.2.1
+      '@vue/cli-service': 4.5.13_89f94c8dfb1f40b8ce420cff6d7afd74
       '@vue/cli-shared-utils': 4.5.13
     dev: true
 
@@ -1615,10 +1617,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     dependencies:
-      '@vue/cli-service': 4.5.13_@vue+compiler-sfc@3.2.1
+      '@vue/cli-service': 4.5.13_89f94c8dfb1f40b8ce420cff6d7afd74
     dev: true
 
-  /@vue/cli-service/4.5.13_@vue+compiler-sfc@3.2.1:
+  /@vue/cli-service/4.5.13_89f94c8dfb1f40b8ce420cff6d7afd74:
     resolution: {integrity: sha512-CKAZN4iokMMsaUyJRU22oUAz3oS/X9sVBSKAF2/shFBV5xh3jqAlKl8OXZYz4cXGFLA6djNuYrniuLAo7Ku97A==}
     engines: {node: '>=8'}
     hasBin: true
@@ -1691,6 +1693,7 @@ packages:
       pnp-webpack-plugin: 1.7.0
       portfinder: 1.0.28
       postcss-loader: 3.0.0
+      raw-loader: 4.0.2
       ssri: 8.0.1
       terser-webpack-plugin: 1.4.5_webpack@4.46.0
       thread-loader: 2.1.3_webpack@4.46.0
@@ -7096,6 +7099,16 @@ packages:
       unpipe: 1.0.0
     dev: true
 
+  /raw-loader/4.0.2:
+    resolution: {integrity: sha512-ZnScIV3ag9A4wPX/ZayxL/jZH+euYb6FcUinPcgiQW0+UBtEv0O6Q3lGd3cqJ+GHH+rksEv3Pj99oxJ3u3VIKA==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      loader-utils: 2.0.0
+      schema-utils: 3.1.1
+    dev: true
+
   /read-pkg/5.2.0:
     resolution: {integrity: sha512-Ug69mNOpfvKDAc2Q8DRpMjjzdtrnv9HcSMX+4VsZxD1aZ6ZzrIE7rlzXBtWTyhULSMKg076AW6WR5iZpD0JiOg==}
     engines: {node: '>=8'}
@@ -7414,6 +7427,15 @@ packages:
   /schema-utils/2.7.1:
     resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
     engines: {node: '>= 8.9.0'}
+    dependencies:
+      '@types/json-schema': 7.0.9
+      ajv: 6.12.6
+      ajv-keywords: 3.5.2_ajv@6.12.6
+    dev: true
+
+  /schema-utils/3.1.1:
+    resolution: {integrity: sha512-Y5PQxS4ITlC+EahLuXaY86TXfR7Dc5lw294alXOq86JAHCihAIZfqv8nNCWvaEJvaC51uN9hbLGeV0cFBdH+Fw==}
+    engines: {node: '>= 10.13.0'}
     dependencies:
       '@types/json-schema': 7.0.9
       ajv: 6.12.6
