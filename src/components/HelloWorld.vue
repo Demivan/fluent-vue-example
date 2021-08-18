@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
+    <i18n path="description-text" tag="p">
+      <template #vue-cli-docs-link="{ vueCliDocsLinkText }">
+        <a href="https://cli.vuejs.org" target="_blank" rel="noopener">{{ vueCliDocsLinkText }}</a>
+      </template>
+    </i18n>
     <h3 v-t:cli-plugins-title />
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -40,6 +40,8 @@ export default {
 </script>
 
 <fluent locale="en">
+description-text = For a guide and recipes on how to configure / customize this project, check out the {$vue-cli-docs-link}.
+  .vue-cli-docs-link-text = vue-cli documentation
 cli-plugins-title = Installed CLI Plugins
 essential-links-title = Essential Links
 ecosystem-title = Ecosystem
